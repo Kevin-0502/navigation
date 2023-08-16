@@ -1,10 +1,17 @@
-import { StyleSheet, Text, View,SafeAreaView } from 'react-native'
+import { StyleSheet, Text, View,SafeAreaView,Button } from 'react-native'
 import React from 'react'
+import { useNavigation } from '@react-navigation/native'
 
-export default function Home() {
+export default function Login() {
+    
+    const navigation=useNavigation()
+
     return (
     <SafeAreaView style={styles.container}>
-        <Text style={styles.txt}>Home</Text>
+        <Text style={styles.txt}>Login</Text>
+        <Button title='Ingresar' color={'green'}
+        onPress={()=>navigation.navigate('TabBarM')}
+        />
     </SafeAreaView>
     )
 }

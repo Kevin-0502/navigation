@@ -1,10 +1,14 @@
-import { StyleSheet, Text, View,SafeAreaView } from 'react-native'
+import { StyleSheet, Text, View,SafeAreaView,Button } from 'react-native'
 import React from 'react'
+import { useNavigation } from '@react-navigation/native'
 
-export default function Details() {
+export default function Details2() {
+    const navigation=useNavigation()
+
     return (
     <SafeAreaView style={styles.container}>
-        <Text style={styles.txt}>Details</Text>
+        <Text style={styles.txt}>Details2</Text>
+        <Button title='Details' onPress={()=>navigation.navigate('Login')} />
     </SafeAreaView>
     )
 }
